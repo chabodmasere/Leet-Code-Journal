@@ -18,3 +18,8 @@ Focus areas:
 - Optimization
 - Problem decomposition
 
+
+## Disclaimer
+
+Solutions are provided for educational purposes. If you are preparing for interviews, I strongly recommend attempting problems independently before referencing this repository.
+
