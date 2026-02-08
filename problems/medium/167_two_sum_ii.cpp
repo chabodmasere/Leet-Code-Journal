@@ -59,6 +59,7 @@ Space Complexity: O(1) - only using two pointers
 --------------------------------------------------
 */
 
+#include <iostream>
 #include <vector>
 using namespace std;
 
@@ -87,3 +88,52 @@ public:
         return {-1, -1};
     }
 };
+
+// Helper function to print test results
+void runTest(vector<int> numbers, int target, vector<int> expected) {
+    Solution sol;
+    vector<int> result = sol.twoSum(numbers, target);
+    
+    cout << "Input: numbers = [";
+    for (int i = 0; i < numbers.size(); i++) {
+        cout << numbers[i];
+        if (i < numbers.size() - 1) cout << ",";
+    }
+    cout << "], target = " << target << endl;
+    
+    cout << "Output: [" << result[0] << "," << result[1] << "]" << endl;
+    cout << "Expected: [" << expected[0] << "," << expected[1] << "]" << endl;
+    
+    if (result == expected) {
+        cout << "✓ PASSED" << endl;
+    } else {
+        cout << "✗ FAILED" << endl;
+    }
+    cout << "-------------------" << endl;
+}
+
+int main() {
+    cout << "=== Two Sum II - Input Array is Sorted ===" << endl << endl;
+    
+    // Test Case 1
+    vector<int> nums1 = {2, 7, 11, 15};
+    runTest(nums1, 9, {1, 2});
+    
+    // Test Case 2
+    vector<int> nums2 = {2, 3, 4};
+    runTest(nums2, 6, {1, 3});
+    
+    // Test Case 3
+    vector<int> nums3 = {-1, 0};
+    runTest(nums3, -1, {1, 2});
+    
+    // Additional Test Case 4
+    vector<int> nums4 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+    runTest(nums4, 17, {8, 9});
+    
+    // Additional Test Case 5
+    vector<int> nums5 = {-10, -5, 0, 5, 10};
+    runTest(nums5, 0, {1, 5});
+    
+    return 0;
+}
