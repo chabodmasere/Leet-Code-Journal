@@ -12,7 +12,7 @@ A comprehensive collection of LeetCode problem solutions, organized by difficult
 | **Total**  | **1**  | **~2500** | **0.04%** |
 
 ### Recent Solutions
-- [001. Two Sum](problems/easy/001_two_sum/) - Easy - Array, Hash Table
+- [001. Two Sum](problems/easy/001_two_sum.cpp) - Easy - Array, Hash Table
 
 ---
 
@@ -22,11 +22,11 @@ A comprehensive collection of LeetCode problem solutions, organized by difficult
 Leet_Code_Journal/
 │
 ├── problems/                      # Solutions organized by difficulty
-│   ├── easy/                     # Easy problems
+│   ├── easy/                     # Easy problems (single .cpp files)
 │   ├── medium/                   # Medium problems
 │   └── hard/                     # Hard problems
 │
-├── topics/                        # Solutions organized by topic
+├── topics/                        # Solutions organized by topic (linked files)
 │   ├── arrays/
 │   ├── strings/
 │   ├── linked_lists/
@@ -74,58 +74,72 @@ Leet_Code_Journal/
 
 ### Adding a New Problem
 
-1. **Use the helper script** (recommended):
-   ```bash
-   # Windows
-   scripts\create_problem.bat <problem_number> <problem_name> <difficulty>
-   
-   # Linux/Mac
-   ./scripts/create_problem.sh <problem_number> <problem_name> <difficulty>
-   ```
+**Use the helper script** (recommended):
+```bash
+# Windows
+scripts\create_problem.bat <problem_number> <problem_name> <difficulty>
 
-2. **Manual creation**:
-   - Create a folder: `problems/<difficulty>/<number>_<name>/`
-   - Add files: `solution.cpp`, `README.md`, `test.cpp`
+# Example
+scripts\create_problem.bat 2 add-two-numbers medium
+```
 
-### Running Tests
+This creates a single C++ file: `problems/medium/002_add-two-numbers.cpp`
+
+### Linking to Topics
 
 ```bash
 # Windows
-scripts\run_tests.bat
+scripts\link_to_topics.bat problems\easy\001_two_sum.cpp arrays hash-table
 
-# Linux/Mac
-./scripts/run_tests.sh
+# This creates linked files in topics/arrays/ and topics/hash-table/
 ```
 
 ### Compiling a Solution
 
 ```bash
-# Using g++
-g++ -std=c++17 -o solution problems/easy/001_two_sum/solution.cpp
-./solution
-
-# Using the test file
-g++ -std=c++17 -o test problems/easy/001_two_sum/test.cpp
-./test
+# Compile and run
+g++ -std=c++17 problems/easy/001_two_sum.cpp -o test
+test
 ```
 
 ---
 
 ## 📝 Problem Structure
 
-Each problem is a single C++ file:
-
-```
-problems/<difficulty>/<number>_<name>.cpp
-```
-
-### File Template
-Each file contains:
+Each problem is a **single C++ file** containing:
 - Problem description and examples (in comments)
 - Solution class with implementation
 - Test cases in main() function
 
-Example: `problems/easy/001_two_sum.cpp`
+**Example:** `problems/easy/001_two_sum.cpp`
+
+```cpp
+/*
+ * LeetCode Problem 1: Two Sum
+ * Difficulty: Easy
+ * Topics: Array, Hash Table
+ * 
+ * Problem Description:
+ * Given an array of integers nums and an integer target,
+ * return indices of the two numbers such that they add up to target.
+ */
+
+#include <vector>
+#include <unordered_map>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        // Solution implementation
+    }
+};
+
+int main() {
+    // Test cases
+    return 0;
+}
+```
 
 ---
 
@@ -139,52 +153,13 @@ Example: `problems/easy/001_two_sum.cpp`
 - [Setup Guide](docs/SETUP.md) - Environment setup instructions
 - [Contributing Guide](docs/CONTRIBUTING.md) - How to add new problems
 - [Topic Linking System](docs/TOPIC_LINKING.md) - How the dual organization works
+- [Compiler Setup](COMPILER_SETUP.md) - Install C++ compiler
 - [Quick Start](QUICKSTART.md) - Get started in 5 minutes
 
 ### Templates
 - [Data Structures](templates/data_structures/)
   - ListNode
   - TreeNode
-  - GraphNode
-
----
-
-## 📈 Statistics
-
-### Streak
-- Current Streak: 0 days
-- Longest Streak: 0 days
-- Last Solved: N/A
-
-### Time Investment
-- Total Time: 0 hours
-- Average per Problem: 0 minutes
-
-### Success Rate
-- First Attempt Success: 0%
-- Problems Revisited: 0
-
----
-
-## 🎯 Goals
-
-### Short-term (1 Month)
-- [ ] Solve 30 easy problems
-- [ ] Solve 15 medium problems
-- [ ] Master array and string problems
-- [ ] Complete sliding window pattern
-
-### Medium-term (3 Months)
-- [ ] Solve 100 easy problems
-- [ ] Solve 50 medium problems
-- [ ] Solve 10 hard problems
-- [ ] Master all basic patterns
-
-### Long-term (6 Months)
-- [ ] Solve 200+ problems total
-- [ ] Complete all major topics
-- [ ] Achieve 50% medium problem success rate
-- [ ] Ready for technical interviews
 
 ---
 
@@ -199,14 +174,12 @@ Example: `problems/easy/001_two_sum.cpp`
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/Leet_Code_Journal.git
-   cd Leet_Code_Journal
+   git clone https://github.com/chabodmasere/Leet-Code-Journal.git
+   cd Leet-Code-Journal
    ```
 
-2. Verify your C++ compiler:
-   ```bash
-   g++ --version
-   ```
+2. Install C++ compiler (if needed):
+   - See [COMPILER_SETUP.md](COMPILER_SETUP.md) for detailed instructions
 
 3. Start solving problems!
 
@@ -250,12 +223,25 @@ Example: `problems/easy/001_two_sum.cpp`
 
 ---
 
-## 🤝 Contributing
+## 🎯 Goals
 
-This is a personal learning journal, but feel free to:
-- Suggest improvements
-- Report issues
-- Share alternative solutions
+### Short-term (1 Month)
+- [ ] Solve 30 easy problems
+- [ ] Solve 15 medium problems
+- [ ] Master array and string problems
+- [ ] Complete sliding window pattern
+
+### Medium-term (3 Months)
+- [ ] Solve 100 easy problems
+- [ ] Solve 50 medium problems
+- [ ] Solve 10 hard problems
+- [ ] Master all basic patterns
+
+### Long-term (6 Months)
+- [ ] Solve 200+ problems total
+- [ ] Complete all major topics
+- [ ] Achieve 50% medium problem success rate
+- [ ] Ready for technical interviews
 
 ---
 
@@ -273,43 +259,6 @@ This is a personal learning journal, but feel free to:
 
 ---
 
-## 📝 Notes
-
-- Solutions are written in C++17
-- Focus on clarity and efficiency
-- Each solution includes detailed comments
-- Test cases cover edge cases
-
----
-
-## 🏆 Achievements
-
-- [ ] First problem solved
-- [ ] 10 problems solved
-- [ ] 50 problems solved
-- [ ] 100 problems solved
-- [ ] First hard problem solved
-- [ ] 7-day streak
-- [ ] 30-day streak
-- [ ] All easy array problems completed
-- [ ] All medium tree problems completed
-
----
-
-## 📅 Study Schedule
-
-| Day | Focus Area | Target |
-|-----|------------|--------|
-| Monday | Arrays | 2-3 problems |
-| Tuesday | Strings | 2-3 problems |
-| Wednesday | Linked Lists | 2-3 problems |
-| Thursday | Trees | 2-3 problems |
-| Friday | Dynamic Programming | 1-2 problems |
-| Saturday | Review & Practice | 3-4 problems |
-| Sunday | Mock Interview | 2-3 problems |
-
----
-
 ## 💡 Tips
 
 1. **Understand before coding** - Spend time understanding the problem
@@ -322,13 +271,35 @@ This is a personal learning journal, but feel free to:
 
 ---
 
-## 📞 Contact
+## 📝 Notes
 
-For questions or discussions about solutions:
-- GitHub Issues: [Create an issue](https://github.com/yourusername/Leet_Code_Journal/issues)
+- Solutions are written in C++17
+- Each problem is a single .cpp file
+- Focus on clarity and efficiency
+- Test cases included in each file
+- Topic linking system for dual organization
+
+---
+
+## 🏆 Achievements
+
+- [x] Repository organized
+- [x] First problem solved (Two Sum)
+- [ ] 10 problems solved
+- [ ] 50 problems solved
+- [ ] 100 problems solved
+- [ ] First hard problem solved
+- [ ] 7-day streak
+- [ ] 30-day streak
+
+---
+
+## Disclaimer
+
+Solutions are provided for educational purposes. If you are preparing for interviews, I strongly recommend attempting problems independently before referencing this repository.
 
 ---
 
 **Happy Coding! 🚀**
 
-*Last Updated: [Date]*
+*Last Updated: January 2026*
