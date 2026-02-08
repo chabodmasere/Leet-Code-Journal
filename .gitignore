@@ -1,0 +1,57 @@
+# Compiled executables
+*.exe
+*.out
+a.out
+solution
+test
+*.o
+*.obj
+
+# Build directories
+build/
+bin/
+obj/
+cmake-build-*/
+.cmake/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.vs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile.cmake
+
+# Visual Studio files
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+
+# Test outputs
+test_output/
+*.test
+
+# Personal notes (if you want to keep them private)
+# personal_notes/
+
+# Archive (old compiler project)
+# Uncomment if you want to exclude from git
+# archive/
