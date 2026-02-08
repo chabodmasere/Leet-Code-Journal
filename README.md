@@ -12,7 +12,7 @@ A comprehensive collection of LeetCode problem solutions, organized by difficult
 | **Total**  | **1**  | **~2500** | **0.04%** |
 
 ### Recent Solutions
-- [001. Two Sum](problems/easy/001_two_sum.cpp) - Easy - Array, Hash Table
+- [001. Two Sum](problems/easy/0001_two_sum.cpp) - Easy - Array, Hash Table
 
 ---
 
@@ -83,13 +83,13 @@ scripts\create_problem.bat <problem_number> <problem_name> <difficulty>
 scripts\create_problem.bat 2 add-two-numbers medium
 ```
 
-This creates a single C++ file: `problems/medium/002_add-two-numbers.cpp`
+This creates a single C++ file: `problems/medium/0002_add-two-numbers.cpp`
 
 ### Linking to Topics
 
 ```bash
 # Windows
-scripts\link_to_topics.bat problems\easy\001_two_sum.cpp arrays hash-table
+scripts\link_to_topics.bat problems\easy\0001_two_sum.cpp arrays hash-table
 
 # This creates linked files in topics/arrays/ and topics/hash-table/
 ```
@@ -98,7 +98,7 @@ scripts\link_to_topics.bat problems\easy\001_two_sum.cpp arrays hash-table
 
 ```bash
 # Compile and run
-g++ -std=c++17 problems/easy/001_two_sum.cpp -o test
+g++ -std=c++17 problems/easy/0001_two_sum.cpp -o test
 test
 ```
 
@@ -111,7 +111,7 @@ Each problem is a **single C++ file** containing:
 - Solution class with implementation
 - Test cases in main() function
 
-**Example:** `problems/easy/001_two_sum.cpp`
+**Example:** `problems/easy/0001_two_sum.cpp`
 
 ```cpp
 /*

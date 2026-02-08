@@ -15,9 +15,9 @@ set PROBLEM_NUM=%~1
 set PROBLEM_NAME=%~2
 set DIFFICULTY=%~3
 
-REM Pad number with zeros (e.g., 1 -> 001)
-set "PADDED_NUM=00%PROBLEM_NUM%"
-set "PADDED_NUM=%PADDED_NUM:~-3%"
+REM Pad number with zeros (e.g., 1 -> 0001)
+set "PADDED_NUM=000%PROBLEM_NUM%"
+set "PADDED_NUM=%PADDED_NUM:~-4%"
 
 REM Create file name
 set "FILE_NAME=%PADDED_NUM%_%PROBLEM_NAME%.cpp"
