@@ -6,10 +6,10 @@ A comprehensive collection of LeetCode problem solutions, organized by difficult
 
 | Difficulty | Solved | Total | Percentage |
 |------------|--------|-------|------------|
-| 🟢 Easy    | 1      | ~600  | 0.17%      |
+| 🟢 Easy    | 0      | ~600  | 0%      |
 | 🟡 Medium  | 0      | ~1300 | 0%         |
 | 🔴 Hard    | 0      | ~600  | 0%         |
-| **Total**  | **1**  | **~2500** | **0.04%** |
+| **Total**  | **0**  | **~2500** | **0%** |
 
 ### Recent Solutions
 - [001. Two Sum](problems/easy/0001_two_sum.cpp) - Easy - Array, Hash Table
@@ -56,8 +56,8 @@ Leet_Code_Journal/
 
 | Topic | Count | Progress |
 |-------|-------|----------|
-| Arrays | 1 | █░░░░░░░░░ 10% |
-| Hash Table | 1 | █░░░░░░░░░ 10% |
+| Arrays | 0 | ░░░░░░░░░░ 0% |
+| Hash Table | 0 | ░░░░░░░░░░ 0% |
 | Strings | 0 | ░░░░░░░░░░ 0% |
 | Linked Lists | 0 | ░░░░░░░░░░ 0% |
 | Trees | 0 | ░░░░░░░░░░ 0% |
