@@ -1,305 +1,118 @@
-# 🚀 LeetCode Journal
+# LeetCode Journal
 
-A comprehensive collection of LeetCode problem solutions, organized by difficulty and topic, with detailed explanations and test cases.
+A C++17 journal for working through LeetCode problems: one file per problem, with the problem
+statement, my approach and the solution together, plus reference notes on common patterns and
+complexity analysis.
 
-## 📊 Progress Tracker
+## Status
 
-| Difficulty | Solved | Total | Percentage |
-|------------|--------|-------|------------|
-| 🟢 Easy    | 0      | ~600  | 0%      |
-| 🟡 Medium  | 0      | ~1300 | 0%         |
-| 🔴 Hard    | 0      | ~600  | 0%         |
-| **Total**  | **0**  | **~2500** | **0%** |
+The journal is set up and at an early stage.
 
-### Recent Solutions
-- [001. Two Sum](problems/easy/0001_two_sum.cpp) - Easy - Array, Hash Table
+| Problem | Difficulty | Topics | State |
+| --- | --- | --- | --- |
+| [1. Two Sum](problems/easy/0001_two_sum.cpp) | Easy | Array, hash table | Problem written up, solution to do |
+| [167. Two Sum II: Input Array Is Sorted](problems/medium/0167_two_sum_ii.cpp) | Medium | Array, two pointers | Approach and complexity written up, code to do |
 
----
+**Solved: 0 easy, 0 medium, 0 hard.**
 
-## 📁 Repository Structure
+## How a problem file is laid out
 
-```
-Leet_Code_Journal/
-│
-├── problems/                      # Solutions organized by difficulty
-│   ├── easy/                     # Easy problems (single .cpp files)
-│   ├── medium/                   # Medium problems
-│   └── hard/                     # Hard problems
-│
-├── topics/                        # Solutions organized by topic (linked files)
-│   ├── arrays/
-│   ├── strings/
-│   ├── linked_lists/
-│   ├── trees/
-│   ├── graphs/
-│   ├── dynamic_programming/
-│   ├── backtracking/
-│   ├── sliding_window/
-│   ├── two_pointers/
-│   └── binary_search/
-│
-├── templates/                     # Reusable code templates
-│   └── data_structures/          # Common data structure definitions
-│
-├── notes/                         # Study notes and patterns
-│
-├── scripts/                       # Automation scripts
-│
-└── docs/                          # Documentation
-```
-
----
-
-## 🎯 Problem Categories
-
-### By Topic
-
-| Topic | Count | Progress |
-|-------|-------|----------|
-| Arrays | 0 | ░░░░░░░░░░ 0% |
-| Hash Table | 0 | ░░░░░░░░░░ 0% |
-| Strings | 0 | ░░░░░░░░░░ 0% |
-| Linked Lists | 0 | ░░░░░░░░░░ 0% |
-| Trees | 0 | ░░░░░░░░░░ 0% |
-| Graphs | 0 | ░░░░░░░░░░ 0% |
-| Dynamic Programming | 0 | ░░░░░░░░░░ 0% |
-| Backtracking | 0 | ░░░░░░░░░░ 0% |
-| Sliding Window | 0 | ░░░░░░░░░░ 0% |
-| Two Pointers | 0 | ░░░░░░░░░░ 0% |
-| Binary Search | 0 | ░░░░░░░░░░ 0% |
-
----
-
-## 🚀 Quick Start
-
-### Adding a New Problem
-
-**Use the helper script** (recommended):
-```bash
-# Windows
-scripts\create_problem.bat <problem_number> <problem_name> <difficulty>
-
-# Example
-scripts\create_problem.bat 2 add-two-numbers medium
-```
-
-This creates a single C++ file: `problems/medium/0002_add-two-numbers.cpp`
-
-### Linking to Topics
-
-```bash
-# Windows
-scripts\link_to_topics.bat problems\easy\0001_two_sum.cpp arrays hash-table
-
-# This creates linked files in topics/arrays/ and topics/hash-table/
-```
-
-### Compiling a Solution
-
-```bash
-# Compile and run
-g++ -std=c++17 problems/easy/0001_two_sum.cpp -o test
-test
-```
-
----
-
-## 📝 Problem Structure
-
-Each problem is a **single C++ file** containing:
-- Problem description and examples (in comments)
-- Solution class with implementation
-- Test cases in main() function
-
-**Example:** `problems/easy/0001_two_sum.cpp`
+Each problem is a single `.cpp` file named `<4-digit number>_<name>.cpp` under its difficulty:
 
 ```cpp
 /*
- * LeetCode Problem 1: Two Sum
- * Difficulty: Easy
- * Topics: Array, Hash Table
- * 
- * Problem Description:
- * Given an array of integers nums and an integer target,
- * return indices of the two numbers such that they add up to target.
- */
+Problem: Two Sum II - Input Array is Sorted
 
-#include <vector>
-#include <unordered_map>
-using namespace std;
+Description:   the problem statement
+Examples:      inputs, outputs and explanations
+Constraints:   the input limits
+Approach:      the idea, step by step
+Time Complexity / Space Complexity
+*/
 
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& nums, int target) {
-        // Solution implementation
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        // solution
     }
 };
-
-int main() {
-    // Test cases
-    return 0;
-}
 ```
 
----
+Writing the approach and its complexity before the code is the point of the journal: it is the
+part worth rereading later.
 
-## 🎓 Study Resources
+## Reference notes
 
-### Patterns & Techniques
-- [Common Problem-Solving Patterns](notes/patterns.md)
-- [Time Complexity Guide](notes/time_complexity.md)
+- [Problem-solving patterns](notes/patterns.md): two pointers, sliding window, fast and slow pointers, hash maps, binary search, DFS, BFS, dynamic programming, backtracking and greedy, each with when to use it and a C++ template.
+- [Time and space complexity](notes/time_complexity.md): common complexities, data structure and algorithm costs, and the rules for working them out.
+- [Array problems](topics/arrays/README.md): the patterns that come up most in array questions.
 
-### Documentation
-- [Setup Guide](docs/SETUP.md) - Environment setup instructions
-- [Contributing Guide](docs/CONTRIBUTING.md) - How to add new problems
-- [Topic Linking System](docs/TOPIC_LINKING.md) - How the dual organization works
-- [Compiler Setup](COMPILER_SETUP.md) - Install C++ compiler
-- [Quick Start](QUICKSTART.md) - Get started in 5 minutes
+`templates/data_structures/` has the standard `ListNode` and `TreeNode` definitions LeetCode
+uses, ready to include when testing locally.
 
-### Templates
-- [Data Structures](templates/data_structures/)
-  - ListNode
-  - TreeNode
+## Adding a problem
 
----
+On Windows, the helper script creates the file with the right name in the right folder:
 
-## 🛠️ Setup
+```bat
+scripts\create_problem.bat 2 add-two-numbers medium
+```
 
-### Prerequisites
-- C++ compiler (g++, clang++, or MSVC)
-- C++17 or later
-- Git
+That creates `problems/medium/0002_add-two-numbers.cpp`. On macOS or Linux, create the file by
+hand using the same naming.
 
-### Installation
+To compile and run a solution locally, add a `main()` with test cases and the headers it needs:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/chabodmasere/Leet-Code-Journal.git
-   cd Leet-Code-Journal
-   ```
+```bash
+g++ -std=c++17 problems/medium/0167_two_sum_ii.cpp -o solution
+./solution
+```
 
-2. Install C++ compiler (if needed):
-   - See [COMPILER_SETUP.md](COMPILER_SETUP.md) for detailed instructions
+## Repository layout
 
-3. Start solving problems!
+```text
+problems/
+├── easy/                    one .cpp file per problem
+└── medium/
+notes/                       patterns and complexity reference
+topics/arrays/               notes on array problems
+templates/data_structures/   ListNode.h, TreeNode.h
+scripts/                     Windows helper scripts
+docs/                        setup, contributing and topic-linking guides
+archive/                     earlier project kept for reference (see below)
+```
 
----
+`QUICKSTART.md` and the guides in `docs/` were written for an earlier layout that used a folder
+per problem with separate solution and test files. Where they disagree with this README, this
+README is current.
 
-## 📚 Learning Path
+## Archive: a small C++ interpreter
 
-### Phase 1: Foundations (Weeks 1-4)
-1. **Arrays & Strings**
-   - Two pointers
-   - Sliding window
-   - Hash tables
+Before it became a LeetCode journal, this repository held a C++ interpreter written from
+scratch, which is kept in [`archive/`](archive/). It is about 2,000 lines of C++17:
 
-2. **Basic Data Structures**
-   - Linked lists
-   - Stacks & queues
-   - Hash maps
+| Stage | Files | Role |
+| --- | --- | --- |
+| Tokens | `compiler/token.*` | Token types and keyword table |
+| Lexer | `compiler/lexer.*` | Source text to tokens, including comments and string literals |
+| AST | `compiler/ast.*` | Expression and statement nodes, with a visitor interface |
+| Parser | `compiler/parser.*` | Recursive descent with operator precedence and line/column errors |
+| Interpreter | `compiler/interpreter.*` | Walks the AST, with a symbol table and recursive function calls |
+| Driver | `main.cpp` | Command line with tokens-only, parse-only and run modes |
 
-### Phase 2: Intermediate (Weeks 5-12)
-1. **Trees & Graphs**
-   - Binary trees
-   - BST operations
-   - DFS/BFS
-   - Graph traversal
-
-2. **Algorithms**
-   - Binary search
-   - Sorting algorithms
-   - Recursion
-
-### Phase 3: Advanced (Weeks 13-24)
-1. **Dynamic Programming**
-   - 1D DP
-   - 2D DP
-   - Memoization
-
-2. **Advanced Topics**
-   - Backtracking
-   - Greedy algorithms
-   - Advanced graph algorithms
-
----
-
-## 🎯 Goals
-
-### Short-term (1 Month)
-- [ ] Solve 30 easy problems
-- [ ] Solve 15 medium problems
-- [ ] Master array and string problems
-- [ ] Complete sliding window pattern
-
-### Medium-term (3 Months)
-- [ ] Solve 100 easy problems
-- [ ] Solve 50 medium problems
-- [ ] Solve 10 hard problems
-- [ ] Master all basic patterns
-
-### Long-term (6 Months)
-- [ ] Solve 200+ problems total
-- [ ] Complete all major topics
-- [ ] Achieve 50% medium problem success rate
-- [ ] Ready for technical interviews
-
----
-
-## 📖 Resources
-
-### LeetCode
-- [LeetCode Website](https://leetcode.com/)
-- [LeetCode Discuss](https://leetcode.com/discuss/)
-- [LeetCode Patterns](https://seanprashad.com/leetcode-patterns/)
-
-### Learning Materials
-- [NeetCode](https://neetcode.io/)
-- [Tech Interview Handbook](https://www.techinterviewhandbook.org/)
-- [Blind 75](https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU)
-
----
-
-## 💡 Tips
-
-1. **Understand before coding** - Spend time understanding the problem
-2. **Start simple** - Begin with brute force, then optimize
-3. **Test thoroughly** - Include edge cases
-4. **Review regularly** - Revisit problems after a week
-5. **Learn patterns** - Recognize common problem patterns
-6. **Time yourself** - Practice under time constraints
-7. **Explain your solution** - Practice explaining to others
-
----
-
-## 📝 Notes
-
-- Solutions are written in C++17
-- Each problem is a single .cpp file
-- Focus on clarity and efficiency
-- Test cases included in each file
-- Topic linking system for dual organization
-
----
-
-## 🏆 Achievements
-
-- [x] Repository organized
-- [x] First problem solved (Two Sum)
-- [ ] 10 problems solved
-- [ ] 50 problems solved
-- [ ] 100 problems solved
-- [ ] First hard problem solved
-- [ ] 7-day streak
-- [ ] 30-day streak
-
----
+It comes with six example programs, a Makefile, a CMake build and test scripts. Its own
+[test report](archive/TEST_REPORT.md) records that it had not been compiled or run when it was
+archived, so treat it as unverified.
 
 ## Disclaimer
 
-Solutions are provided for educational purposes. If you are preparing for interviews, I strongly recommend attempting problems independently before referencing this repository.
+Solutions are for my own learning. If you are preparing for interviews, attempt each problem
+yourself before reading anyone's solution, including these.
 
----
+## License
 
-**Happy Coding! 🚀**
+[MIT](LICENSE)
 
-*Last Updated: January 2026*
+## Author
+
+**Chabod Masere**

@@ -5,10 +5,10 @@ This directory contains all LeetCode problems related to arrays, linked from the
 ## Problems in this Topic
 
 ### Easy
-- [001_two_sum](001_two_sum/) - Two Sum
+- [0001_two_sum](../../problems/easy/0001_two_sum.cpp) - Two Sum
 
 ### Medium
-- (Add medium array problems here)
+- [0167_two_sum_ii](../../problems/medium/0167_two_sum_ii.cpp) - Two Sum II: Input Array Is Sorted
 
 ### Hard
 - (Add hard array problems here)
